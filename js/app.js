@@ -34,7 +34,7 @@ new Vue({
         keyword: "",
     },
     methods: {
-        search: function(event) {
+        search(event) {
             this.data = filterData(data, this.keyword);
         }
     }
