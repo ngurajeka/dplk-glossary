@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DPLK Glossary</title>
+    <link rel="stylesheet" href="./css/bulma.min.css">
+</head>
+<body>
+    <div id="app">
+        <section class="hero is-dark">
+            <div class="hero-body has-margin-top-md has-margin-bottom-md">
+                <div class="container">
+                    <div class="columns is-vcentered">
+                        <div class="column is-6">
+                            <h1 class="title is-1 is-spaced">DPLK Glossary</h1>
+                            <p class="subtitle"> Bingung dengan istilah-istilah di Dana Pensiun? Samaaaaa. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section" id="search-box">
+            <div class="container">
+                <div class="field">
+                    <div class="control">
+                        <input v-model="keyword" v-on:change="search" class="input is-medium" type="text" placeholder="Pencarian...">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <div class="container">
+                <div class="content is-large">
+                    <div class="box" v-for="item in data">
+                        <h2 class="title is-3">{{item.title}}</h2>
+                        <p>{{item.description}}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <script src="https://unpkg.com/vue"></script>
+    <script src="./js/app.js"></script>
+    
+</body>
+</html>
